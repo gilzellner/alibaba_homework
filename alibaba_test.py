@@ -21,6 +21,7 @@ def fetchLogs(namespace=None, numberOfLines=100, offset=0, reverse=False):
         return content[::-1]
     return content[:numberOfLines]
 
+@lrudecorator(100)
 def tail(namespace=None, numberOfLines=100):
     return fetchLogs(namespace=namespace, numberOfLines=numberOfLines, reverse=True)
 
