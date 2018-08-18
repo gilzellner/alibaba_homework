@@ -21,7 +21,7 @@ def tail(namespace=None, numberOfLines=100):
     return fetchLogs(namespace=namespace, numberOfLines=numberOfLines, reverse=True)
 
 
-print fetchLogs(numberOfLines=5, offset=0, reverse=True)
+# print fetchLogs(numberOfLines=5, offset=0, reverse=True)
 # print fetchLogs(namespace='2018-08-12', numberOfLines=5, offset=0, reverse=False)
 
 
