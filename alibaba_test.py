@@ -2,6 +2,12 @@ from pylru import lrudecorator
 
 
 @lrudecorator(100)
+def get_part_of_large_file(start_index, end_index):
+    with open(filename) as fin:
+        fin.seek(start_index)
+    return fin.read(end_index - start_index)
+
+@lrudecorator(100)
 def get_log_lines(filename):
     with open(filename) as f:
         content = f.readlines()
